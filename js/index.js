@@ -13,7 +13,17 @@ document.addEventListener('click', (event) => {
         fetchBook();
     } else if (event.target.tagName === "BUTTON"){
         console.log(event.target)
-        patchUser();
+        console.log(users)
+        if(users.filter(user => user.username == "amber")){
+        alert("you already read this book")
+        }else{
+            console.log("u failed");
+            patchUser();
+        }
+        
+        
+
+         
     }
 })
 
